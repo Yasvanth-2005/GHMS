@@ -1,0 +1,48 @@
+<?php
+
+// Connect to the database
+$conn = mysqli_connect("localhost", "username", "password", "database_name");
+
+// Check if the form was submitted
+if(isset($_POST['submit'])) {
+
+  // Get the uploaded file information
+  $filename = $_FILES['file']['name'];
+  $filetype = $_FILES['file']['type'];
+  $filesize = $_FILES['file']['size'];
+  $filetmpname = $_FILES['file']['tmp_name'];
+
+  // Validate the file
+  $allowed_extensions = array('pdf', 'docx', 'txt');
+  $file_extension = pathinfo($filename, PATHINFO_EXTENSION);
+
+  if(!in_array($file_extension, $allowed_extensions)) {
+    die("Error: Invalid file format. Only PDF, DOCX, and TXT files are allowed.");
+  }
+
+  if($filesize > 5242880) { // 5 MB
+    die("Error: File size exceeds the allowed limit.");
+  }
+
+  // Generate a unique filename
+  $newfilename = uniqid('', true) . '.' . $file_extension;
+
+  // Move the uploaded file to a permanent location
+  $target_dir = "uploads/";
+  $target_file = $target_dir . $newfilename;
+
+  if(!move_uploaded_file($filetmpname, $target_file)) {
+    die("Error: Failed to upload file.");
+  }
+
+  // Insert file metadata into the database
+  $sql = "INSERT INTO documents (filename, filetype, filesize) VALUES ('$newfilename', '$filetype', '$filesize')";
+
+  if(mysqli_query($conn, $sql)) {
+    echo "File uploaded successfully.";
+  } else {
+    echo "Error: " . mysqli_error($conn);
+  }
+}
+
+?>

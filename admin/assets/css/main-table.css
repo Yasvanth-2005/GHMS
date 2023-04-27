@@ -1,0 +1,54 @@
+.profile-padding{
+    padding-right:20px
+}
+.datatable tr{
+    border: 1px solid black;
+    margin-block:2px;
+}
+.datatable tr td:first-child{
+    font-size: 15px;
+    font-weight: 500;
+}
+.datatable tr td a{
+    color:black;
+}
+.datatable tr td:first-child:hover{
+    transform: scale(1.01);
+    transition: all 0.3;
+}
+.datatable tr td:nth-child(2){
+    width: 15 0px;
+    text-align: center;
+}
+@media (max-width:576px){
+.dataTable-top{
+    display: flex;
+    flex-direction: column;
+}
+.dataTable-top>*{
+    margin: 5px 10px;
+}
+}
+@media (max-width:768px){
+.datatable tr td:nth-child(2){
+    text-align:left;
+}
+.datatable tr{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.dataTable tr>*{
+    margin-block:5px;
+}
+}
+.notice-board{                                
+    width: 98%;
+    background-color: white;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+    max-width: 1000px;
+}
+.notice-board table td:nth-child(2){
+    font-size:12px;
+    width: 100px;
+}

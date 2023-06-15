@@ -24,9 +24,10 @@
         $branch = mysqli_real_escape_string($conn,$_POST['branch']);
         $ab = mysqli_real_escape_string($conn,$_POST['academicBlock']);
         $hb = mysqli_real_escape_string($conn,$_POST['hostelBlock']);
+        $hostel_room = mysqli_real_escape_string($conn,$_POST['hostelRoom']);
 
-        $update_stmt = $conn->prepare("UPDATE `student_registrations` SET class_room = ?,branch = ?, academic_year = ?, academic_block = ?, hostel_block = ? WHERE id_number = ?");
-        $update_stmt->bind_param("ssssss", $class_name,$branch, $year, $ab, $hb, $id_number);
+        $update_stmt = $conn->prepare("UPDATE `student_registrations` SET class_room = ?,branch = ?, academic_year = ?, academic_block = ?, hostel_block = ?,hostel_room = ? WHERE id_number = ?");
+        $update_stmt->bind_param("sssssss", $class_name,$branch, $year, $ab,$hb,$hostel_room,$id_number);
         if($update_stmt->execute()){
             $_SESSION['success_message'] = "Record updated successfully";
             header("Location: users-profile.php");

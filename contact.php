@@ -102,7 +102,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>siddhu</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>RGUKT Nuzvid</span></strong>. All Rights Reserved
     </div>
     
   </footer><!-- End Footer -->

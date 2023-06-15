@@ -19,12 +19,35 @@
       .main-form{
           margin: 10px;
           width: 98%;
-          background-color: white;
-          box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
-          max-width: 400px;
       }
       form{
+          background-color: white;
+          box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
           padding: 10px 30px;
+          max-width:400px;
+      }
+      .instructions{
+        background-color: white;
+        box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+        padding: 20px;
+        max-width:400px;
+        height: fit-content;
+      }
+      .instructions .ins_title{
+         font-size:26px;
+         color: #012970;
+         font-weight:550;
+      }
+      @media (max-width:992px){
+        .ol-2{
+          order:-1;
+          margin-bottom: 20px;
+        }
+        .instructions{
+          background: transparent;
+          box-shadow: none;
+          max-width: 100%;
+        }
       }
   </style>
 
@@ -74,43 +97,52 @@
     </div><!-- End Page Title -->
 
 
-    <div class="main-form mx-auto">
-      <form action="leave-reg.php" name="leaves" method="POST">
-          <div class="row">
-              <div class="col-12">
-                  <label for="leave-from" class="form-label">
-                      Leave From
-                  </label>
-                  <input type="date" id="leave-from" name="leaveFrom" class="form-control mb-3">
-              </div>
-              <div class="col-12">
-                  <label for="leave-to" class="form-label">
-                      Leave To
-                  </label>
-                  <input type="date" id="leave-to" name="leaveTo" class="form-control mb-3">
-              </div>
-              <div class="col-12">
-                  <label for="leave-type" class="form-label">
-                      Leave Type
-                  </label>
-                  <select name="leaveType" id="leave-type" class="form-select mb-3">
-                      <option value="">None</option>
-                      <option value="outpass">Outpass</option>
-                      <option value="sick-leave">Sick Leave</option>
-                      <option value="normal-leave">Normal Leave</option>
-                  </select>
-              </div>
-              <div class="col-12">
-                  <label for="reason" class="form-label">Reason</label>
-                  <textarea name="leaveReason" id="reason" rows="3" class="form-control mb-3"></textarea>
-              </div>
-          </div>
-          <div id="error-msg" class="text-center" style="color:rgba(200,40,40);font-weight:600"></div>
-          <div class="w-100">
-              <input type="submit" value="Apply Leave" class="btn btn-primary w-50" style="margin:5px 25%" id="submit-btn">
-          </div>
-      </form>
-  </div>
+    <div class="row">
+      <div class="main-form mx-auto col col-12 col-lg-6 d-flex justify-content-center">
+        <form action="leave-reg.php" name="leaves" method="POST">
+            <div class="row">
+                <div class="col-12">
+                    <label for="leave-from" class="form-label">
+                        Leave From
+                    </label>
+                    <input type="date" id="leave-from" name="leaveFrom" class="form-control mb-3">
+                </div>
+                <div class="col-12">
+                    <label for="leave-to" class="form-label">
+                        Leave To
+                    </label>
+                    <input type="date" id="leave-to" name="leaveTo" class="form-control mb-3">
+                </div>
+                <div class="col-12">
+                    <label for="leave-type" class="form-label">
+                        Leave Type
+                    </label>
+                    <select name="leaveType" id="leave-type" class="form-select mb-3">
+                        <option value="">None</option>
+                        <option value="outpass">Outpass</option>
+                        <option value="sick-leave">Sick Leave</option>
+                        <option value="normal-leave">Normal Leave</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="reason" class="form-label">Reason</label>
+                    <textarea name="leaveReason" id="reason" rows="3" class="form-control mb-3"></textarea>
+                </div>
+            </div>
+            <div id="error-msg" class="text-center" style="color:rgba(200,40,40);font-weight:600"></div>
+            <div class="w-100">
+                <input type="submit" value="Apply Leave" class="btn btn-primary w-50" style="margin:5px 25%" id="submit-btn">
+            </div>
+        </form>
+      </div>
+      <div class="col-12 col-lg-6 ol-2 d-flex justify-content-center">
+            <div class="instructions">
+              <div class="ins_title">Note :- </div>
+              <p class="ins_points mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, fugit vero provident perspiciatis quaerat iusto repellendus? Officiis sed veniam nam.</p>
+              <p class="ins_points">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nobis!</p>
+            </div>
+      </div>
+    </div>
   
 
   <script>
@@ -147,7 +179,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>IIIT-Nuzvid</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>RGUKT Nuzvid</span></strong>. All Rights Reserved
     </div>
     
   </footer><!-- End Footer -->

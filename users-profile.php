@@ -68,7 +68,7 @@
 
           <div class="card">
               <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-              <img src=" https://intranet.rguktn.ac.in/SMS/usrphotos/user/<?php echo $id_number;?>.jpg " alt="Profile" class="rounded-circle">
+              <img src=" https://intranet.rguktn.ac.in/SMS/usrphotos/user/<?php echo $id_number;?>.jpg " alt="Profile" class="rounded-circle" />
               <h2 style="text-transform:capitalize;margin-bottom:10px;text-align:center;"><?php echo $name;?></h2>
               <h3><?php echo $id_number;?> | <?php echo $year;?></h3>
               <h3><?php echo $password;?></h3>
@@ -213,9 +213,6 @@
 
                   <!-- Profile Edit Form -->
                   <form method="post" action="update-profile.php">
-                   
-                    
-                    
 
                     <div class="row mb-3">
                       <label for="className" class="col-sm-5 col-lg-3 col-form-label">Class</label>
@@ -297,9 +294,9 @@
                       <label for="hostelBlock" class="col-sm-5 col-lg-3 col-form-label">Hostel Block</label>
                       <div class="col-sm-6 col-lg-9">
                         <select name="hostelBlock" id="hostelBlock" class="form-select mb-3">
-                          <option value="K1">K1</option>
                           <option value="K2">K2</option>
                           <option value="K3">K3</option>
+                          <option value="K4">K4</option>
                         </select>
                       </div>
                     </div>
@@ -312,6 +309,13 @@
                             }
                           }
                     </script>
+
+                    <div class="row mb-3">
+                      <label for="hostelRoom" class="col-sm-5 col-lg-3 col-form-label">Hostel Room</label>
+                      <div class="col-sm-7 col-lg-9">
+                        <input name="hostelRoom" type="text" class="form-control" id="hostelRoom" value="<?php echo $hostelroom;?>">
+                      </div>
+                    </div>
                    
                     <div class="text-center">
                       <button type="submit" class="btn btn-primary">Change Detials</button>
@@ -339,7 +343,7 @@
 
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>IIIT-Nuzvid</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>RGUKT Nuzvid</span></strong>. All Rights Reserved
     </div>
     
   </footer><!-- End Footer -->

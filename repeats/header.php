@@ -16,7 +16,7 @@ echo '
   <ul class="d-flex align-items-center">
 
       <a class="nav-link nav-profile d-flex align-items-center profile-padding" href="#" data-bs-toggle="dropdown">
-        <img src="https://intranet.rguktn.ac.in/SMS/usrphotos/user/';?><?php echo $id_number;?><?php echo '.jpg" alt="Profile" class="rounded-circle">
+        <img src="https://intranet.rguktn.ac.in/SMS/usrphotos/user/';?><?php echo $id_number;?><?php echo '.jpg" alt="Profile" class="rounded-circle" />
         <span class="d-none d-md-block dropdown-toggle ps-2">'?><?php echo $id_number;?><?php echo '</span>
       </a><!-- End Profile Iamge Icon -->
 

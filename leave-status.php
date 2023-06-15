@@ -9,6 +9,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>GHMS | Leave Status</title>
+  <meta http-equiv="refresh" content="300">
   <meta content="" name="description">
   <meta content="" name="keywords">
   <style>
@@ -40,7 +41,7 @@
         line-height:40px;
         font-weight:500;
         text-transform:capitalize;
-        font-size:18px;
+        font-size:15px;
       }
       .leave-status .dataTable-bottom{
         padding: 10px;
@@ -123,6 +124,9 @@
           <li class="breadcrumb-item active">Leaves</li>
           <li class="breadcrumb-item active">Leave Status</li>
         </ol>
+        <div class="sub-text">
+          <p style="font-weight:600">* represents Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, atque.</p>
+        </div>
       </nav>
     </div><!-- End Page Title -->
 
@@ -166,7 +170,7 @@
                     <td><span  class="
                       <?php if($row['leave_status']=='Rejected'){
                           echo 'danger';}
-                          else if($row['leave_status']=='Granted'){
+                          else if($row['leave_status']=='Granted*'){
                             echo 'success';
                           }else{
                             echo 'pending';
@@ -194,7 +198,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>IIIT-Nuzvid</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>RGUKT Nuzvid</span></strong>. All Rights Reserved
     </div>
     
   </footer><!-- End Footer -->

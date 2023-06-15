@@ -144,8 +144,6 @@
             }
           }
         ?>
-        <p class="mt-4">If you are faculty , Please Log in here</p>
-        <a href="admin/login.php"><button class="btn btn-primary">Faculty Login</button></a>
       </section>
     </div>
   </main><!-- End #main -->

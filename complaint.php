@@ -7,15 +7,18 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>GHMS | Complaints</title>
+  <meta http-equiv="refresh" content="300">
   <meta content="" name="description">
   <meta content="" name="keywords">
   <style>
+    .dataTable-table > thead > tr > th{
+      border-bottom:none;
+    }
     .success,.pending,.recieved{
       border-radius:5px;
       font-weight:540;
@@ -41,12 +44,9 @@
         width: 100%;
       }
       .datatable tr td {
-            font-size:18px;
+            font-size:16px;
             font-weight: 500;
             line-height:20px;
-      }
-      .dataTable-table > thead > tr > th{
-          border-bottom: none;
       }
       .dataTable-sorter::after,.dataTable-sorter::before{
         display: none;
@@ -56,6 +56,34 @@
       }
       .dataTable-wrapper.no-footer .dataTable-container{
         padding: 5px 0px;
+      }
+      .main-form {
+        margin: 10px;
+        width: 98%;
+        background-color: white;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+        max-width: 400px;
+        margin-bottom: 70px;
+      }
+
+      form {
+        padding: 10px 30px;
+      }
+
+      .hide-other {
+        display: none;
+      }
+
+      .hide-other.active {
+        display: block;
+      }
+
+      .main-form {
+        display: none;
+      }
+
+      .main-form.active {
+        display: block;
       }
     @media(max-width:960px){
       .card-body{
@@ -122,7 +150,6 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <!-- <li class="breadcrumb-item">Users</li> -->
           <li class="breadcrumb-item active">Complaints</li>
         </ol>
       </nav>
@@ -179,38 +206,6 @@
         </div>
       </form>
     </div>
-
-
-    <style>
-      .main-form {
-        margin: 10px;
-        width: 98%;
-        background-color: white;
-        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-        max-width: 400px;
-        margin-bottom: 70px;
-      }
-
-      form {
-        padding: 10px 30px;
-      }
-
-      .hide-other {
-        display: none;
-      }
-
-      .hide-other.active {
-        display: block;
-      }
-
-      .main-form {
-        display: none;
-      }
-
-      .main-form.active {
-        display: block;
-      }
-    </style>
     <script>
       const selectbox = document.querySelector(".input_field select");
       const otherBox = document.querySelector('.hide-other');
@@ -254,11 +249,11 @@
             ?>
                 <thead>
                   <tr>
-                    <th scope="col">S.NO</th>
-                    <th scope="col">COMPLAINT TYPE</th>
-                    <th scole="col">Room No</th>
-                    <th scope="col">Complaint</th>
-                    <th scope="col">Status</th>
+                    <th scope="col" style="border-bottom:none">S.NO</th>
+                    <th scope="col" style="border-bottom:none">COMPLAINT TYPE</th>
+                    <th scope="col" style="border-bottom:none">Room No</th>
+                    <th scope="col" style="border-bottom:none">Complaint</th>
+                    <th scope="col" style="border-bottom:none">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -375,7 +370,8 @@
                     ?> 
             </tbody>
           </table>
-
+          <h5 style="font-weight:700" class="mt-2">Note :-</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, deleniti. Officiis necessitatibus debitis voluptas incidunt!</p>
         </div>
 
       </div>
@@ -385,7 +381,7 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
       <div class="copyright">
-        &copy; Copyright <strong><span>IIIT-Nuzvid</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>RGUKT Nuzvid</span></strong>. All Rights Reserved
       </div>
     </footer><!-- End Footer -->
 

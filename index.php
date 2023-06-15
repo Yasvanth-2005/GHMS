@@ -9,9 +9,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>GHMS | Dashboard</title>
+  <meta http-equiv="refresh" content="300">
   <meta content="" name="description">
   <meta content="" name="keywords">
   <style>
+        thead{
+          display: none;
+        }
         .offcanvas-footer{
           display: flex;
           justify-content:flex-end;
@@ -116,10 +120,16 @@
                                   ?>
                                   </div>
                                   <h6 class="mt-3 ext<?php echo $s_no; ?>">External-links :<a href="<?php echo $row['links'];?>"><?php echo $row['links'];?></a></h6>
+                                  <h6 class="mt-3 doc<?php echo $s_no; ?>">Files :-&nbsp;&nbsp;&nbsp;<a href="<?php echo $row['docs'];?>" download><?php echo $row['doc_name'];?></a></h6>
                                   <script>
                                       var extlsec = document.querySelector('.ext<?php echo $s_no; ?>');
                                       <?php if ($row['links'] == null) { ?>
                                         extlsec.style.display = 'none';
+                                      <?php } ?>
+
+                                      var doclsec = document.querySelector('.doc<?php echo $s_no;?>');
+                                      <?php if ($row['docs'] == null) {?>
+                                         doclsec.style.display = 'none';
                                       <?php } ?>
                                   </script>
                                 </div>
@@ -161,7 +171,7 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>IIIT-Nuzvid</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>RGUKT Nuzvid</span></strong>. All Rights Reserved
     </div>
     
   </footer><!-- End Footer -->

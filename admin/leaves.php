@@ -7,6 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>GHMS | Leave Requests</title>
+  <meta http-equiv="refresh" content="300">
   <meta content="" name="description">
   <meta content="" name="keywords">
 

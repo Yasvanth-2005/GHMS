@@ -7,6 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>GHMS | Admin Dashboard</title>
+  <meta http-equiv="refresh" content="300">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -90,12 +91,12 @@
                       <input type="text" name="notificationTitle" id="title" class="form-control mb-3">
                   </div>
                   <div class="col-12">
-                      <label for="short-desc" class="form-label">Short Description *</label>
+                      <label for="short-desc" class="form-label">Short Description</label>
                       <textarea name="shortDesc" id="short-desc" rows="3" class="form-control mb-3"></textarea>
-                  </div>
+                  </div>  
                   <div class="col-12">
                       <label for="long-desc" class="form-label">Long Description *</label>
-                      <textarea name="longDesc" id="long-desc" rows="30" class="form-control mb-3"></textarea>
+                      <textarea name="longDesc" id="long-desc" rows="10" class="form-control mb-3"></textarea>
                   </div>
                   <div class="col-12 mt-3">
                       <label for="links" class="form-label">Notification links</label>
@@ -140,10 +141,9 @@
       })
       function validateForm(){
         const title = document.getElementById('title').value;
-        const shortDesc = document.getElementById('short-desc').value;
         const longDesc = document.getElementById("long-desc").value;
         let error = 0;
-        if(title === '' || shortDesc === '' || longDesc === ''){
+        if(title === '' || longDesc === ''){
           errorMsg.innerHTML = 'All fields with * are required';
           error = 1;
         }
